@@ -1,26 +1,25 @@
-$('.menu-toggle').click(function() {
-  
-    $('.site-nav').toggleClass('site-nav--open', 500);
-    $(this).toggleClass('open');
-    
-  })
+// $('.menu-toggle').click(function() {
 
-  // Increments the delay on each item.
-$('.rolldown-list li').each(function () {
-  var delay = ($(this).index() / 4) + 's';
-  $(this).css({
-    webkitAnimationDelay: delay,
-    mozAnimationDelay: delay,
-    animationDelay: delay
-  });
-});
+//     $('.site-nav').toggleClass('site-nav--open', 500);
+//     $(this).toggleClass('open');    
+//   })
 
-$('#btnReload').click(function () {
-  $('#myList').removeClass('rolldown-list');
-  setTimeout(function () {
-    $('#myList').addClass('rolldown-list');
-  }, 1);
-});
+//   // Increments the delay on each item.
+// $('.rolldown-list li').each(function () {
+//   var delay = ($(this).index() / 4) + 's';
+//   $(this).css({
+//     webkitAnimationDelay: delay,
+//     mozAnimationDelay: delay,
+//     animationDelay: delay
+//   });
+// });
+
+// $('#btnReload').click(function () {
+//   $('#myList').removeClass('rolldown-list');
+//   setTimeout(function () {
+//     $('#myList').addClass('rolldown-list');
+//   }, 1);
+// });
 
 
 // by
@@ -35,10 +34,14 @@ $('#btnReload').click(function () {
 
 class parallaxTiltEffect {
 
-  constructor({element, tiltEffect}) {
-
+  constructor({element, tiltEffect, imageUrl = null}) {
     this.element = element;
     this.container = this.element.querySelector(".container");
+    
+    if(imageUrl){
+      this.container.style.backgroundImage = "url(" + imageUrl + ")";
+    }
+
     this.size = [300, 360];
     [this.w, this.h] = this.size;
 
@@ -71,7 +74,7 @@ class parallaxTiltEffect {
       X = (-(offsetX - (this.w/2)) / 3) / 3;
       Y = ((offsetY - (this.h/2)) / 3) / 3;
     }
-
+    
     this.setProperty('--rY', X.toFixed(2));
     this.setProperty('--rX', Y.toFixed(2));
 
@@ -113,15 +116,24 @@ const $ = e => document.querySelector(e);
 
 const wrap1 = new parallaxTiltEffect({
   element: $('.wrap--1'),
-  tiltEffect: 'reverse'
+  tiltEffect: 'reverse',
+  imageUrl: '/assets/img1.jpg.jpeg',
 });
 
 const wrap2 = new parallaxTiltEffect({
   element: $('.wrap--2'),
-  tiltEffect: 'normal'
+  tiltEffect: 'normal',
+  imageUrl: '/assets/img2.jpg.jpeg',
 });
 
 const wrap3 = new parallaxTiltEffect({
   element: $('.wrap--3'),
-  tiltEffect: 'reverse'
+  tiltEffect: 'reverse',
+  imageUrl: '/assets/img3.webp.jpeg',
+});
+
+const wrap4 = new parallaxTiltEffect({
+  element: $('.wrap--4'),
+  tiltEffect: 'reverse',
+  imageUrl: "/assets/img4.jpg.jpeg",
 });
