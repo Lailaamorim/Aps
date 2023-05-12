@@ -12,9 +12,21 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+a{
+    color:white;
+}
 
 body{
     background:black;
+}
+/*NAVEBAR*/
+
+/*Menu tbm*/ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 18px;
 }
 
 .logo {
@@ -22,7 +34,7 @@ body{
     font-size: 1rem;
     margin: 0;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
   }
   
   .logo span {
@@ -87,13 +99,6 @@ body{
 
 }
 
-* {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-}
 
 
 

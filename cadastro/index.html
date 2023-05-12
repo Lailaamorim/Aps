@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--<!DOCTYPE html> – A tag !DOCTYPE informa ao navegador a versão do HTML que está sendo utilizada no documento. Por exemplo: no HTML5, basta incluir !DOCTYPE html, e assim o navegador já saberá que se trata de um documento na versão HTML5;-->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" /> <!--style=”…” – Permite incluir elementos CSS (estilos) dentro da tag;-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Cadastro</title> <!--Esta tag é o  elemento básico da estrutura do html-->
+  </head> <!--Essa tag delimita o cabeçalho do documento. Não possui nenhum valor visível, porém é capaz de transmitir ao navegador diversas informações muito úteis e essenciais a uma boa apresentação do seu documento HTML;-->     
+  <body> 
+    <!-- a tag que representa o corpo do documento. Em síntese, é nessa tag que todos os elementos visíveis do seu site devem ser inseridos-->
+    <div class="container"> 
+      
+      <!--class=”…“ – Atribui uma classe ao elemento (uma classe pode ser utilizada para um ou mais elementos)-->
+      <div class="header">
+       
+          <a href="/principal/index.html"> <span class="material-symbols-outlined" >
+          temp_preferences_eco
+          </span></a>
+        <h2>Cadastre-se</h2>
+      </div>
+
+      <form id="form" class="form"> <!--id=”…“ – Atribui um id ao elemento (um id deve ser único, ou seja atribuído a um único elemento);-->
+        <div class="form-control">
+          <label for="username">Nome de usuário:</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Digite seu nome de usuário..."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email:</label>
+          <input type="text" id="email" placeholder="Digite seu email.." />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password">Senha:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Digite sua senha..."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password-confirmation">Confirmação de senha:</label>
+          <input
+            type="password"
+            id="password-confirmation"
+            placeholder="Digite sua senha novamente..."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+     
+            </div>
+      
+  
+      </div>
+
+
+
+
+
+        <script>
+          function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('Sucesso');
+                location.href = "home.html";
+            }else{
+                alert('Usuario ou senha incorretos');      
+            }
+
+        }
+        </script>
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      
+    ></script>
+
+    <script src="scrpit.js"></script>
+
+    
+
+
+  </body>
+</html>
