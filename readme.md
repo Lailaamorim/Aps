@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[🔗CLIQUE AQUI PARA ACESSAR😍](https://github.com/Lailaamorim/Aps)
+[🔗CLIQUE AQUI PARA ACESSAR😍](https://lailaamorim.github.io/Aps/)
 
 </div>
 
